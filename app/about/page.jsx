@@ -22,7 +22,7 @@ const aboutText = {
   },
   text3: {
     en: "Ready to implement excellent projects \n with wonderful people.",
-    ru: "Готовы реализовать отличные проекты \n с замечательными людьми.",
+    ru: "Готов реализовать отличные проекты \n с замечательными людьми.",
   },
 };
 
