@@ -1,9 +1,11 @@
+"use client"
+
 import React from "react";
 import { useLanguage } from "../hooks/useLanguage";
 
 export default function About() {
 
-    const { language } = useLanguage();
+const { language } = useLanguage();
 
 const aboutText = {
   aboutMe: {
