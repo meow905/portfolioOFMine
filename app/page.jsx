@@ -4,42 +4,61 @@ import About from "./about/page";
 import Skills from "./skills/page";
 import Portfolio from "./portfolio/page";
 import Contact from "./contact/page";
+import { useLanguage } from "./hooks/useLanguage";
 
 const links = [
   {
     url: "#home",
-    text: "Home",
+    text: {
+      en: "Home",
+      ru: "Главное",
+    },
   },
   {
     url: "#about",
-    text: "About",
+    text: {
+      en: "About",
+      ru: "О нас",
+    },
   },
   {
     url: "#skills",
-    text: "Skills",
+    text: {
+      en: "Skills",
+      ru: "Скилы",
+    },
   },
   {
     url: "#portfolio",
-    text: "Portfolio",
+    text: {
+      en: "Portfolio",
+      ru: "Портфолио"
+    } 
   },
   {
     url: "#contact",
-    text: "Contacts",
+    text: {
+      en: "Contacts",
+      ru: "Контакты"
+    } 
   },
 ];
 
 export default function Main() {
+  const { language } = useLanguage();
+   
+  
   return (
     <div className="container mx-auto max-w-screen-2xl">
-      <nav id="navigation" className="w-full xl:px-40 px-0 relative xl:fixed">
+      <nav id="navigation" className="w-full  px-0 relative xl:fixed">
         <ul
           className="w-full xl:flex hidden xl:justify-between font-bold fixed
-        text-lg py-6 border-b-2 xl:flex-row flex-col items-center gap-6 xl:static  bg-[#F6F6F6] xl:bg-[#ededed] bg opacity-90 xl-opacity-80"
+        text-lg py-6 px-40 border-b-2 xl:flex-row flex-col items-center gap-6 xl:static  bg-[#F6F6F6] xl:bg-[#ededed] bg opacity-90 xl-opacity-80"
         >
           {links.map((link, index) => {
             return (
               <li key={index}>
-                <a href={link.url}>{link.text}</a>
+                <a href={link.url}>{link.text[language]}</a>
               </li>
             );
           })}
