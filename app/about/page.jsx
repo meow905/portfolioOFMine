@@ -5,25 +5,25 @@ export default function About() {
 
     const { language } = useLanguage();
 
-  const aboutText = {
-    aboutMe: {
-      en: "About me",
-      ru: "Обо мне",
-    },
-    text: {
-      en: "Hi, Im Tabrez – Frontend developer from Dushanbe.\nIm interested  in programming and everything connected \nwith it.",
+const aboutText = {
+  aboutMe: {
+    en: "About me",
+    ru: "Обо мне",
+  },
+  text: {
+    en: "Hi, I&apos;m Tabrez – Frontend developer from Dushanbe.\nI&apos;m interested in programming and everything connected \nwith it.",
+    ru: "Привет, меня зовут Табрез - я фронтенд-разработчик из Душанбе.\n Я интересуюсь программированием \nи всем, что с этим связано.",
+  },
+  text2: {
+    en: "I&apos;m studying at courses Introduction to Frontend in\nIlmhona.",
+    ru: "Я изучаю курсы по фротенд-разработке в Илмхоне",
+  },
+  text3: {
+    en: "Ready to implement excellent projects \n with wonderful people.",
+    ru: "Готовы реализовать отличные проекты \n с замечательными людьми.",
+  },
+};
 
-      ru: "Привет, меня зовут Табрез - я фронтенд-разработчик из Душанбе.\n Я интересуюсь программированием \nи всем, что с этим связано.",
-    },
-    text2: {
-      en: " Im studying at courses Introduction to Frontend in\nIlmhona.",
-      ru: "Я изучаю курсы по фротенд-разработке в Илмхоне",
-    },
-    text3: {
-      en: "Ready to implement excellent projects \n with wonderful people.",
-      ru: "Готовы реализовать отличные проекты \n с замечательными людьми.",
-    },
-  };
 
   return (
     <div
