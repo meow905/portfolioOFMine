@@ -11,12 +11,12 @@ export default function About() {
       ru: "Обо мне",
     },
     text: {
-      en: "Hi, I'm Tabrez – Frontend developer from Dushanbe.\nIm interested  in programming and everything connected \nwith it.",
+      en: "Hi, Im Tabrez – Frontend developer from Dushanbe.\nIm interested  in programming and everything connected \nwith it.",
 
       ru: "Привет, меня зовут Табрез - я фронтенд-разработчик из Душанбе.\n Я интересуюсь программированием \nи всем, что с этим связано.",
     },
     text2: {
-      en: " I'm studying at courses 'Introduction to Frontend' in\nIlmhona.",
+      en: " Im studying at courses Introduction to Frontend in\nIlmhona.",
       ru: "Я изучаю курсы по фротенд-разработке в Илмхоне",
     },
     text3: {
