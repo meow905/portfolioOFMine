@@ -1,15 +1,15 @@
 export const texts = {
   name: {
-    en: "Denis",
-    ru: "Денис",
+    en: "Tabrez",
+    ru: "Табрез",
   },
   secondName: {
-    en: "Novik",
-    ru: "Новик",
+    en: "Sanoev",
+    ru: "Саноев",
   },
 
   work: {
-    en: " Frontend developer",
+    en: "Frontend developer",
     ru: "Фронтенд разработчик",
   },
 

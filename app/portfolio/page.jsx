@@ -1,50 +1,39 @@
 import Image from "next/image";
-import picture from "../img/19eb6e72d32e254c8b02825f0390f169.jpg";
-import picture2 from "../img/4dc19da808f0bf66bdd48c26c8228ec8.png";
-import picture3 from "../img/reebok_web.png";
+import picture from "../img/internetShop.png";
+import picture2 from "../img/promoWorld.png";
+import Link from "next/link";
+
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="bg-[#F6F6F6] text-black text-center">
-      <h1 className="text-4xl py-12 font-bold">Portfolio</h1>
-      <div className="flex justify-center">
-        <Image
-          src={picture}
-          alt="woman"
-          priority={true}
-          className="xl:w-[1000px] xl:h-[600px] w-[320px] h-[175px]"
-        />
-      </div>
-      <div className="flex justify-center py-12">
-        <p className="text-[18px] font-medium border-b-2 border-black max-w-max p-0 m-0">
-          Online fashion store - Homepage
-        </p>
-      </div>
-      <div className="flex justify-center pb-12">
-        <Image
-          src={picture2}
-          priority={false}
-          alt="black guy"
-          className="xl:w-[1000px] xl:h-[600px] w-[320px] h-[175px]"
-        />
-      </div>
-      <div className="flex justify-center pb-12">
-        <p className="text-[18px] font-medium border-b-2 border-black max-w-max p-0 m-0">
-          Reebok Store - Concept
-        </p>
-      </div>
-      <div className="flex justify-center pb-12">
-        <Image
-          src={picture3}
-          priority={false}
-          alt="braun"
-          className="xl:w-[1000px] xl:h-[600px] w-[320px] h-[175px]"
-        ></Image>
-      </div>
-      <div className="flex justify-center pb-12">
-        <p className="text-[18px] font-medium border-b-2 border-black max-w-max p-0 m-0">
-          Braun Landing Page - Concept
-        </p>
+    <section
+      id="portfolio"
+      className="bg-[#F6F6F6] md:px-24 px-9 py-5 text-black text-center"
+    >
+      <h1 className="text-4xl py-12 font-bold">My projects</h1>
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-5 items-center">
+        <div className="flex flex-col items-center gap-2">
+          <Image src={picture}></Image>
+          <h2 className="text-2xl">Food delivery website</h2>
+          <Link
+            className="bg-blue-400 text-white px-4 py-2 rounded-md hover:scale-110 transition-all"
+            target="blank"
+            href={"https://internet-shop-weld.vercel.app/"}
+          >
+            Click to watch
+          </Link>
+        </div>
+        <div className="flex flex-col items-center gap-2">
+          <Image src={picture2}></Image>
+          <h2 className="text-2xl">Website with clothes and other products</h2>
+          <Link
+            className="bg-blue-400 text-white px-4 py-2 rounded-md hover:scale-110 transition-all"
+            target="blank"
+            href={"https://promo-world.vercel.app/"}
+          >
+            Click to watch
+          </Link>
+        </div>
       </div>
     </section>
   );

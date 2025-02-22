@@ -5,9 +5,9 @@ import LanguageProvider from "./hooks/useLanguage";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <LanguageProvider>{children}</LanguageProvider>
-      </body>
+      <LanguageProvider>
+        <body>{children}</body>
+      </LanguageProvider>
     </html>
   );
 }

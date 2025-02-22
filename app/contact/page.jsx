@@ -1,12 +1,43 @@
+import React from "react";
+import { useLanguage } from "../hooks/useLanguage";
+import Link from "next/link";
+
 export default function Contact() {
+
+  const objectWithInfo = {
+    header: {
+      en: "Contacts",
+      ru: "Контакты",
+    },
+    anotherInfo: {
+      en: "Want to know more or just chat?\n You are welcome!",
+      ru: "Если хочешь узнать больше\n или просто пообщаться,\n то отправь мне сообщение",
+    },
+
+    sendMessage: {
+      en: "Send messagge",
+      ru: "Отправить сообщение",
+    },
+  };
+
+   const { language } = useLanguage();
   return (
     <section id="contact" className="bg-[#FFFFFF] text-black text-center py-12">
-      <h1 className="pb-10 text-4xl font-bold">Contacts</h1>
+      <h1 className="pb-10 text-4xl font-bold">
+        {objectWithInfo.header[language]}
+      </h1>
       <p className="pb-10">
-        Want to know more or just chat? <br /> You are welcome!
+        {objectWithInfo.anotherInfo[language].split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
       </p>
       <button className="border-black border-2 xl:px-4 py-1 px-16 rounded-3xl bg-black text-white text-[18px] mb-12 hover:scale-90 transition-transform">
-        Send messagge
+        <Link target="blank" href={"https://web.telegram.org/k/"}>
+          {objectWithInfo.sendMessage[language]}
+        </Link>
       </button>
       <div className="flex justify-center">
         <svg
@@ -94,9 +125,6 @@ export default function Contact() {
           </defs>
         </svg>
       </div>
-      <h3 className="xl:hidden block py-12 text-[#828282]">
-        Like me on <br /> LinkedIn, Instagram, Behance, Dribble
-      </h3>
     </section>
   );
 }

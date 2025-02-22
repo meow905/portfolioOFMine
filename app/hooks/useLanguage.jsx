@@ -1,30 +1,20 @@
 "use client";
 import { useState, createContext, useContext } from "react";
 
-const LanguageContext = createContext(undefined);
+const LanguageContext = createContext(null);
 
 const languagesArr = [
-  {
-    lang: "en",
-    text: "ENG",
-  },
-
-  {
-    lang: "ru",
-    text: "RU",
-  },
+  { lang: "en", text: "ENG" },
+  { lang: "ru", text: "RU" },
 ];
 
 export default function LanguageProvider({ children }) {
   const [language, setLanguage] = useState(languagesArr[0].lang);
 
   function handleChange() {
-    if (language === "en") {
-      setLanguage(languagesArr.filter((lang) => lang.lang === "ru")[0].lang);
-    } else {
-      setLanguage(languagesArr.filter((lang) => lang.lang === "en")[0].lang);
-    }
+    setLanguage((prev) => (prev === "en" ? "ru" : "en"));
   }
+
   return (
     <LanguageContext.Provider value={{ language, languagesArr, handleChange }}>
       {children}
@@ -34,7 +24,8 @@ export default function LanguageProvider({ children }) {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
-
-  if (!context) return console.log("Use context at the main jsx file");
+  if (!context) {
+    throw new Error("useLanguage must be used within a LanguageProvider");
+  }
   return context;
 };
